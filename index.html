@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1><i class="fa fa-heartbeat fa-2x" aria-hidden="true"></i>Heart Failure Prediction<i class="fa fa-heartbeat fa-2x" aria-hidden="true"></i></h1>
+
+            <h3>Age</h3>
+            <input id="first" name="age" type="number ">
+            <h3>Anaemia (Yes=1 / No=0)</h3><br><input id="second" name="anaemia" required="required">
+            <h3>Creatinine Phosphokinase</h3><input id="third" name="creatinine_phosphokinase" required="required">
+            <h3>Diabetes (Yes=1 / No=0)</h3><br><input id="fourth" name="diabetes" required="required">
+            <h3>Ejection Fraction</h3><br><input id="fifth" name="ejection_fraction" required="required">
+            <h3>High Blood Pressure (Yes=1 / No=0)</h3><br><input id="sixth" name="high_blood_pressure" required="required">
+            <h3>Platelets</h3><br><input id="seventh" name="platelets" required="required">
+            <h3>Serum Creatinine</h3><br><input id="eighth" name="serum_creatinine" required="required">
+            <h3>Serum Sodium</h3><br><input id="ninth" name="serum_sodium" required="required">
+            <h3>Sex (Male=0 / Female=1)</h3><br><input id="tenth" name="sex" required="required">
+            <h3>Smoking (Yes=1 / No=0)</h3><br><input id="eleventh" name="smoking" required="required">
+
+            <br><br><button id="sub" type="submit ">Predict</button>
+            <br>
+
+
+
+            
+
+        </form>
+
+        <br><br><br><h2>{{ prediction_text }}<h2>
+
+
+    </div>
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</body>
+
+</html>
